@@ -1,0 +1,209 @@
+%% ============================================================================
+%% ZÁKLADNÍ ŠABLONA - TUL EKONOMICKÁ FAKULTA
+%% ============================================================================
+%%
+%% Čistá šablona pro semestrální práce, diplomové práce a vlastní strukturu.
+%% Formátování odpovídá požadavkům TUL.
+%%
+%% Kompilace: LuaLaTeX + Biber
+%%
+%% ============================================================================
+
+\documentclass[11pt,a4paper]{article}
+
+%% ============================================================================
+%% BALÍČKY
+%% ============================================================================
+
+%% Rozměry stránky
+\usepackage[
+    a4paper,
+    left=30mm,
+    right=25mm,
+    top=25mm,
+    bottom=25mm,
+    headheight=15pt
+]{geometry}
+
+%% Písmo
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{Inter}[
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+\setmathfont{Latin Modern Math}
+
+%% Jazyk
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+\setotherlanguage{english}
+\usepackage{csquotes}
+
+%% Řádkování
+\usepackage{setspace}
+\onehalfspacing
+
+%% Odstavce - bez odsazení, mezera mezi odstavci
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{15pt plus 2pt minus 1pt}
+
+%% Barvy TUL
+\usepackage{xcolor}
+\definecolor{tulgreen}{HTML}{8DC63F}
+\definecolor{tuldarkgreen}{HTML}{6B9C2F}
+
+%% Obrázky
+\usepackage{graphicx}
+\graphicspath{{figures/}{assets/}}
+
+%% Tabulky
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+%% Seznamy - kompaktní
+\usepackage{enumitem}
+\setlist{itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt}
+
+%% Matematika
+\usepackage{amsmath}
+
+%% Bibliografie - ISO 690 Harvardský styl
+\usepackage[
+    backend=biber,
+    style=iso-authoryear,
+    sorting=nyt,
+    maxbibnames=99,
+    giveninits=true,
+    uniquename=init,
+    doi=true,
+    url=true,
+    urldate=long
+]{biblatex}
+\addbibresource{references.bib}
+
+%% Odkazy
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=tuldarkgreen,
+    urlcolor=tuldarkgreen
+}
+
+%% Popisky
+\usepackage{caption}
+\captionsetup{
+    format=plain,
+    labelfont=bf,
+    textfont=it,
+    justification=centering
+}
+
+%% Záhlaví a zápatí
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% ============================================================================
+%% VYPLŇTE SVÉ ÚDAJE
+%% ============================================================================
+
+\title{Název vaší práce}
+\author{Jméno Příjmení}
+\date{2026}
+
+%% ============================================================================
+%% DOKUMENT
+%% ============================================================================
+\begin{document}
+
+%% --- Titulní strana ---
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+
+    \includegraphics[width=0.5\textwidth]{tul-ef-logo-1.png}
+
+    \vspace{2cm}
+
+    {\LARGE\bfseries \@title \par}
+
+    \vspace{1cm}
+
+    {\large Semestrální práce \par}  % nebo: Diplomová práce, Bakalářská práce
+
+    \vfill
+
+    \begin{flushleft}
+        \textit{Autor:} \@author \\
+        \textit{Studijní program:} Ekonomie \\
+        \textit{Vedoucí práce:} [Jméno vedoucího]
+    \end{flushleft}
+
+    \vspace{1cm}
+
+    {\large Liberec \@date \par}
+\end{titlepage}
+
+%% --- Obsah ---
+\tableofcontents
+\newpage
+
+%% ============================================================================
+%% OBSAH PRÁCE - upravte dle potřeby
+%% ============================================================================
+
+\section{Úvod}
+
+Zde napište úvod do vaší práce.
+
+\section{Teoretická část}
+
+Teoretický rámec práce s citacemi. Podle \textcite{porter1990} je konkurenceschopnost...
+
+\subsection{Podsekce}
+
+Text podsekce.
+
+\section{Metodika}
+
+Popis použitých metod.
+
+\section{Výsledky}
+
+Prezentace výsledků.
+
+% Příklad tabulky
+\begin{table}[htbp]
+    \centering
+    \caption{Příklad tabulky}
+    \label{tab:priklad}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Položka} & \textbf{Hodnota A} & \textbf{Hodnota B} \\
+        \midrule
+        První & 10 & 20 \\
+        Druhá & 15 & 25 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Diskuse}
+
+Interpretace výsledků.
+
+\section{Závěr}
+
+Shrnutí práce.
+
+%% --- Seznam literatury ---
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

@@ -1,0 +1,289 @@
+%% ============================================================================
+%% ŠABLONA PRO DISERTAČNÍ PRÁCI - TUL EKONOMICKÁ FAKULTA
+%% ============================================================================
+%%
+%% Jak používat tuto šablonu:
+%% 1. Vyplňte své údaje níže (VYPLŇTE SVÉ ÚDAJE)
+%% 2. Pište obsah do jednotlivých kapitol
+%% 3. Klikněte na "Recompile" (zelené tlačítko)
+%%
+%% Šablona odpovídá směrnici děkana EF TUL č. 4/2022
+%% Citace: ČSN ISO 690 (Harvardský styl)
+%%
+%% ============================================================================
+
+\documentclass{tul-base}
+
+%% ============================================================================
+%% VYPLŇTE SVÉ ÚDAJE (povinné)
+%% ============================================================================
+
+\thesistitle{Název vaší disertační práce v češtině}
+\thesistitleen{Title of Your Dissertation in English}
+\author{Jméno Příjmení}
+\supervisor{prof. Ing. Jméno Příjmení, Ph.D.}
+\studyprogram{P0413D050019 -- Podniková ekonomika a management}
+% \specialization{} % Odkomentujte a vyplňte, pokud máte specializaci
+\thesisyear{2026}
+
+%% ============================================================================
+%% BIBLIOGRAFIE - přidejte své zdroje do souboru references.bib
+%% ============================================================================
+\addbibresource{references.bib}
+
+%% ============================================================================
+%% ZAČÁTEK DOKUMENTU
+%% ============================================================================
+\begin{document}
+
+%% --- Titulní strana (česky) ---
+\maketitlepage
+
+%% --- Titulní strana (anglicky) ---
+\maketitlepageen
+
+%% ============================================================================
+%% PROHLÁŠENÍ
+%% ============================================================================
+\chapter*{Prohlášení}
+\addcontentsline{toc}{chapter}{Prohlášení}
+
+Prohlašuji, že jsem disertační práci na téma \emph{\@thesistitle} vypracoval(a) samostatně s použitím uvedené literatury a na základě konzultací se školitelem.
+
+Byl(a) jsem seznámen(a) s tím, že se na moji disertační práci plně vztahují práva a povinnosti vyplývající ze zákona č. 121/2000 Sb., o právu autorském, zejména § 60 -- školní dílo.
+
+\vspace{2cm}
+
+\noindent V Liberci dne \today \hfill \makebox[6cm]{\dotfill}
+
+\hfill podpis autora
+
+\cleardoublepage
+
+%% ============================================================================
+%% ANOTACE (česky)
+%% ============================================================================
+\begin{annotation}[Anotace]
+
+% VYPLŇTE: Stručná charakteristika práce (max. 1 strana)
+% - O čem práce pojednává
+% - Jaké metody byly použity
+% - Hlavní výsledky a závěry
+
+Zde napište anotaci v českém jazyce. Anotace by měla stručně charakterizovat
+obsah disertační práce, použité metody a hlavní výsledky. Maximální rozsah
+je jedna strana.
+
+\begin{keywords}[Klíčová slova]
+klíčové slovo 1, klíčové slovo 2, klíčové slovo 3, klíčové slovo 4, klíčové slovo 5
+\end{keywords}
+
+\end{annotation}
+
+%% ============================================================================
+%% ANNOTATION (anglicky)
+%% ============================================================================
+\begin{annotation}[Annotation]
+
+% FILL IN: Brief description of the thesis (max. 1 page)
+
+Write your annotation in English here. The annotation should briefly describe
+the content of the dissertation, methods used, and main results. Maximum length
+is one page.
+
+\begin{keywords}[Keywords]
+keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
+\end{keywords}
+
+\end{annotation}
+
+%% ============================================================================
+%% OBSAH, SEZNAMY
+%% ============================================================================
+\tableofcontents
+\listoffigures
+\listoftables
+
+%% --- Seznam zkratek (volitelné) ---
+\begin{abbreviations}
+    \item[EU] Evropská unie
+    \item[HDP] Hrubý domácí produkt
+    \item[TUL] Technická univerzita v Liberci
+    % Přidejte další zkratky...
+\end{abbreviations}
+
+%% ============================================================================
+%% HLAVNÍ TEXT - začíná arabské číslování stránek
+%% ============================================================================
+\startmainmatter
+
+%% ============================================================================
+%% 1. ÚVOD
+%% ============================================================================
+\chapter{Úvod}
+
+% VYPLŇTE: Úvod do problematiky, motivace, struktura práce
+
+Zde napište úvod do vaší disertační práce. Úvod by měl obsahovat:
+\begin{itemize}
+    \item Uvedení do problematiky
+    \item Motivaci pro výzkum
+    \item Stručný přehled struktury práce
+\end{itemize}
+
+%% ============================================================================
+%% 2. CÍLE PRÁCE
+%% ============================================================================
+\chapter{Cíle disertační práce}
+
+% VYPLŇTE: Hlavní a dílčí cíle, výzkumné otázky/hypotézy
+
+\section{Hlavní cíl}
+
+Hlavním cílem disertační práce je...
+
+\section{Dílčí cíle}
+
+\begin{enumerate}
+    \item První dílčí cíl
+    \item Druhý dílčí cíl
+    \item Třetí dílčí cíl
+\end{enumerate}
+
+\section{Výzkumné otázky}
+
+\begin{itemize}
+    \item VO1: První výzkumná otázka?
+    \item VO2: Druhá výzkumná otázka?
+\end{itemize}
+
+%% ============================================================================
+%% 3. SOUČASNÝ STAV POZNÁNÍ (LITERÁRNÍ REŠERŠE)
+%% ============================================================================
+\chapter{Současný stav poznání}
+
+% VYPLŇTE: Literární rešerše s citacemi
+
+\section{Teoretická východiska}
+
+Zde popište teoretický rámec vaší práce. Používejte citace pomocí příkazů:
+\begin{itemize}
+    \item \texttt{\textbackslash textcite\{klic\}} -- Novák (2020) tvrdí, že...
+    \item \texttt{\textbackslash parencite\{klic\}} -- ...jak uvádí literatura (Novák 2020).
+\end{itemize}
+
+Například: Podle \textcite{porter1990} je konkurenceschopnost...
+
+\section{Přehled dosavadního výzkumu}
+
+Dosavadní výzkum v této oblasti se zaměřoval na... \parencite{krugman1991}.
+
+%% ============================================================================
+%% 4. METODIKA
+%% ============================================================================
+\chapter{Metodika a popis řešení}
+
+% VYPLŇTE: Popis použitých metod, dat, postupů
+
+\section{Výzkumný design}
+
+Popište design vašeho výzkumu...
+
+\section{Sběr dat}
+
+Popište, jak jste sbírali data...
+
+\section{Metody analýzy}
+
+Popište použité analytické metody...
+
+%% ============================================================================
+%% 5. VÝSLEDKY
+%% ============================================================================
+\chapter{Výsledky}
+
+% VYPLŇTE: Prezentace výsledků s tabulkami a grafy
+
+\section{Hlavní zjištění}
+
+Zde prezentujte své výsledky.
+
+% Příklad tabulky:
+\begin{table}[htbp]
+    \centering
+    \caption{Příklad tabulky}
+    \label{tab:priklad}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Kategorie} & \textbf{Hodnota 1} & \textbf{Hodnota 2} \\
+        \midrule
+        A & 10 & 20 \\
+        B & 15 & 25 \\
+        C & 20 & 30 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Jak je vidět v Tabulce \ref{tab:priklad}...
+
+% Příklad obrázku:
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{figures/graf.png}
+%     \caption{Příklad grafu}
+%     \label{fig:priklad}
+% \end{figure}
+
+%% ============================================================================
+%% 6. DISKUSE
+%% ============================================================================
+\chapter{Diskuse}
+
+% VYPLŇTE: Interpretace výsledků, přínosy, limity
+
+\section{Interpretace výsledků}
+
+Diskutujte své výsledky v kontextu existující literatury...
+
+\section{Přínosy pro teorii a praxi}
+
+Popište přínosy vaší práce...
+
+\section{Limity výzkumu}
+
+Uveďte omezení vašeho výzkumu...
+
+\section{Doporučení pro další výzkum}
+
+Navrhněte směry dalšího výzkumu...
+
+%% ============================================================================
+%% 7. ZÁVĚR
+%% ============================================================================
+\chapter{Závěr}
+
+% VYPLŇTE: Shrnutí práce, splnění cílů, hlavní závěry
+
+Shrňte hlavní závěry vaší disertační práce...
+
+%% ============================================================================
+%% SEZNAM POUŽITÉ LITERATURY
+%% ============================================================================
+\printbibliography[heading=bibintoc,title={Seznam použité literatury}]
+
+%% ============================================================================
+%% PŘÍLOHY
+%% ============================================================================
+\begin{appendices}
+
+\chapter{První příloha}
+
+Obsah první přílohy...
+
+\chapter{Druhá příloha}
+
+Obsah druhé přílohy...
+
+\end{appendices}
+
+\end{document}

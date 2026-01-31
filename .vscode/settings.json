@@ -1,0 +1,87 @@
+{
+    // LaTeX Workshop nastavení pro TULeX
+
+    // Výchozí kompilátor: LuaLaTeX
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+
+    // Recepty pro kompilaci
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (lualatex)",
+            "tools": ["latexmk-lualatex"]
+        },
+        {
+            "name": "lualatex → biber → lualatex × 2",
+            "tools": ["lualatex", "biber", "lualatex", "lualatex"]
+        }
+    ],
+
+    // Nástroje
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-lualatex",
+            "command": "latexmk",
+            "args": [
+                "-lualatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%DOCFILE%"]
+        }
+    ],
+
+    // Automatická kompilace při uložení
+    "latex-workshop.latex.autoBuild.run": "onSave",
+
+    // Zobrazit PDF vedle editoru
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    // Čištění pomocných souborů
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav",
+        "*.run.xml",
+        "*.bcf"
+    ],
+
+    // Formátování
+    "editor.wordWrap": "on",
+    "editor.rulers": [100],
+
+    // Spell check pro češtinu
+    "cSpell.language": "cs,en"
+}
